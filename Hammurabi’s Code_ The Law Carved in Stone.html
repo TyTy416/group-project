@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hammurabi’s Code: The Law Carved in Stone</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{--bg:#f2f3f0;--ink:#1b2236;--mute:#515b73;--lap:#18346b;--gold:#9a7421;--panel:#fff;--line:#d5d8d2;--hero:#13254d;--heroink:#f1ead6;--herogold:#d4ac55;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12151d;--ink:#e8e6dc;--mute:#a4aabb;--lap:#8fb0f0;--gold:#d4ac55;--panel:#1b2030;--line:#2e3548;--hero:#0b1530}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12151d;--ink:#e8e6dc;--mute:#a4aabb;--lap:#8fb0f0;--gold:#d4ac55;--panel:#1b2030;--line:#2e3548;--hero:#0b1530}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 Spectral,Georgia,serif}
+h1,h2,h3,.cin{font-family:Cinzel,Georgia,serif;font-weight:700;line-height:1.2}
+a{color:var(--lap)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--hero);display:flex;gap:4px;overflow-x:auto;padding:0 12px;white-space:nowrap}
+nav a{color:var(--heroink);text-decoration:none;padding:14px 12px;font:500 14px Cinzel,serif}
+nav a:hover,nav a:focus-visible{color:var(--herogold);outline:none;box-shadow:inset 0 -3px var(--herogold)}
+.hero{background:var(--hero);color:var(--heroink);padding:72px 20px 80px}
+.wrap{max-width:1040px;margin:0 auto}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,6vw,64px);margin:0 0 20px}
+.hero p{font-size:20px;max-width:34em;color:#d9d3bf}
+.stele{border:2px solid var(--herogold);border-radius:140px 140px 6px 6px;padding:56px 26px 28px;background:linear-gradient(#1b2f5e,#0e1c3e);text-align:center}
+.stele small{display:block;font:500 13px Cinzel,serif;color:var(--herogold);margin-bottom:10px}
+.stele q{font-size:21px;font-style:italic;display:block;margin:6px 0 14px}
+.stele .rule{height:2px;background:repeating-linear-gradient(90deg,var(--herogold) 0 10px,transparent 10px 16px);margin:16px 0;opacity:.7}
+section{padding:68px 20px}section:nth-of-type(even){background:color-mix(in srgb,var(--panel) 70%,var(--bg))}
+h2{font-size:clamp(26px,4vw,38px);margin:0 0 14px;color:var(--lap)}
+.lead{font-size:20px;max-width:44em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:28px;border-left:3px solid var(--gold)}
+.facts div{padding:6px 18px}.facts b{display:block;font:700 22px Cinzel,serif;color:var(--lap)}.facts span{color:var(--mute);font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:26px}
+details{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:4px;padding:14px 18px}
+summary{cursor:pointer;font:700 18px Cinzel,serif;color:var(--lap);list-style:none}summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--gold)}details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;font-size:17px}details b{color:var(--gold)}
+.tabs{display:flex;gap:8px;margin:24px 0 0}
+.tabs button,.chips button{font:500 15px Cinzel,serif;padding:10px 18px;border:1px solid var(--lap);background:transparent;color:var(--lap);border-radius:4px;cursor:pointer}
+.tabs button[aria-selected=true],.chips button[aria-pressed=true]{background:var(--lap);color:var(--bg)}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.panel{background:var(--panel);border:1px solid var(--line);padding:8px 24px;margin-top:-1px}
+.panel li{margin:14px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.law{background:var(--panel);border:1px solid var(--line);padding:14px 18px;margin-bottom:12px;border-radius:4px}
+.law h3{margin:0 0 4px;font-size:16px;color:var(--gold)}.law p{margin:0;font-size:17px}.law em{color:var(--mute);font-size:15px}
+.tl{border-left:3px solid var(--lap);margin:26px 0 0 8px;padding-left:24px}
+.tl div{margin-bottom:20px;position:relative}.tl div::before{content:"";position:absolute;left:-33px;top:9px;width:13px;height:13px;border-radius:50%;background:var(--gold)}
+.tl b{font-family:Cinzel,serif;color:var(--lap)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}
+.note{border:1px solid var(--line);background:var(--panel);padding:18px 22px;border-radius:4px}
+footer{background:var(--hero);color:#cfc9b4;padding:34px 20px;font-size:15px}
+@media(max-width:760px){.hero .wrap,.cols{grid-template-columns:1fr}.hero{padding-top:44px}body{font-size:17px}}
+</style>
+</head>
+<body>
+<nav aria-label="Sections"><a href="#top">Home</a><a href="#why">Why it was made</a><a href="#innov">Innovations</a><a href="#problems">Problems solved</a><a href="#impact">Impact</a><a href="#laws">Sample laws</a><a href="#timeline">Timeline</a><a href="#limits">Limits</a></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div><h1>282 laws, carved in stone for everyone to see</h1>
+<p>Around 1754 BCE, King Hammurabi of Babylon had his laws inscribed on a stone pillar and set up in public. It is one of the best-preserved law codes of the ancient world, and it changed how societies think about justice, contracts, and the duties of rulers.</p></div>
+<div class="stele" aria-label="Summary of the stele"><small>The Stele of Hammurabi</small>
+<q>“Let the strong not harm the weak.”</q><div class="rule"></div>
+<p style="margin:0;font-size:16px;color:#d9d3bf">A paraphrase of the stated aim in its prologue: to bring justice to the land and protect widows and orphans.</p></div>
+</div></header>
+
+<section id="about"><div class="wrap">
+<h2>What is Hammurabi’s Code?</h2>
+<p class="lead">It is a collection of laws and legal decisions issued by Hammurabi, the sixth king of Babylon, who ruled from about 1792 to 1750 BCE. It was written in Akkadian cuneiform on a black diorite pillar, with a carving at the top of the king standing before Shamash, the sun god and god of justice.</p>
+<div class="facts">
+<div><b>c. 1754 BCE</b><span>When the code was composed</span></div>
+<div><b>282</b><span>Laws, as numbered by modern scholars</span></div>
+<div><b>About 2.25 m</b><span>Height of the stele</span></div>
+<div><b>1901–02</b><span>Found at Susa (modern Iran) by a French team</span></div>
+<div><b>The Louvre</b><span>Where it is displayed today</span></div>
+</div></div></section>
+
+<section id="why"><div class="wrap">
+<h2>Why was it created?</h2>
+<p class="lead">Hammurabi had conquered most of Mesopotamia. His kingdom now held many cities with different local customs, languages, and courts. He needed a shared standard to hold it together.</p>
+<div class="cols">
+<div class="note"><h3 class="cin">To unify an empire</h3><p>Before Babylon’s rise, cities like Eshnunna and Isin each had their own rules. A single published code gave a growing state a common legal language and reinforced the king’s authority.</p></div>
+<div class="note"><h3 class="cin">To show the king as just</h3><p>The prologue and epilogue present Hammurabi as a shepherd of his people, chosen by the gods to establish justice. Publishing the law was also a way to win trust and legitimacy.</p></div>
+<div class="note"><h3 class="cin">To make law predictable</h3><p>Disputes over land, debts, marriages, and trade were growing as cities grew. Judges needed clear guidance, and ordinary people needed to know the rules.</p></div>
+<div class="note"><h3 class="cin">To protect the vulnerable</h3><p>The text states the goal of protecting widows, orphans, and the poor from abuse by the powerful, though it still favored people of higher rank.</p></div>
+</div></div></section>
+
+<section id="innov"><div class="wrap">
+<h2>The historical innovations</h2>
+<p class="lead">Hammurabi was not the first lawgiver. Earlier codes such as Ur-Nammu’s (about 2100 BCE) came first. But the Code’s scale, public display, and range of topics were new. Select each innovation to see what it was, why it mattered, and what it replaced.</p>
+<div class="grid" id="innovGrid"></div>
+</div></section>
+
+<section id="problems"><div class="wrap">
+<h2>Problems it was built to solve</h2>
+<div class="grid" id="probGrid"></div>
+</div></section>
+
+<section id="impact"><div class="wrap">
+<h2>How it changed people’s lives</h2>
+<p class="lead">The effects played out at two speeds: what people noticed within a few years, and what echoed for thousands of years.</p>
+<div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="short">Short term</button><button role="tab" aria-selected="false" data-t="long">Long term</button></div>
+<div class="panel" id="impactPanel" role="tabpanel"></div>
+</div></section>
+
+<section id="laws"><div class="wrap">
+<h2>Sample laws, in plain English</h2>
+<p class="lead">These are paraphrases of real provisions. Law numbers follow the standard modern numbering.</p>
+<div class="chips" id="chips" role="group" aria-label="Filter laws"></div>
+<div id="lawList"></div>
+</div></section>
+
+<section id="timeline"><div class="wrap">
+<h2>Timeline</h2>
+<div class="tl">
+<div><b>c. 2100 BCE</b><br>Ur-Nammu of Ur issues one of the earliest known law codes.</div>
+<div><b>c. 1792 BCE</b><br>Hammurabi becomes king of Babylon, then a modest city-state.</div>
+<div><b>c. 1754 BCE</b><br>The Code is composed and inscribed on stelae set up in public.</div>
+<div><b>c. 1158 BCE</b><br>The Elamite king Shutruk-Nahhunte carries the stele off to Susa as war loot.</div>
+<div><b>1901–02 CE</b><br>French archaeologists find it at Susa; it is taken to the Louvre in Paris.</div>
+<div><b>Today</b><br>It is studied in law schools and history courses as a foundational legal text.</div>
+</div></div></section>
+
+<section id="limits"><div class="wrap">
+<h2>Limits and common myths</h2>
+<div class="cols">
+<div class="note"><h3 class="cin">It was not equal justice</h3><p>Punishments depended on social class. Injuring a noble could bring a matching injury, while injuring a commoner or a slave usually meant a fine. Penalties could also be harsh, including death for many offenses.</p></div>
+<div class="note"><h3 class="cin">“An eye for an eye” was not the whole code</h3><p>Only some laws use equal-for-equal punishment. Many more set fines, wages, prices, and procedures for ordinary business.</p></div>
+<div class="note"><h3 class="cin">Was it a law code or a set of rulings?</h3><p>Historians debate this. Court records show judges rarely cited it directly, so it may have been more a monument of royal justice and a teaching text than a statute book consulted case by case.</p></div>
+<div class="note"><h3 class="cin">Not the first, but influential</h3><p>It copied and expanded older legal traditions. Scribes kept copying it for over a thousand years, which shows how highly it was valued.</p></div>
+</div></div></section>
+
+<footer><div class="wrap">This educational overview summarizes widely accepted scholarship. Law texts are paraphrased, and dates are approximate. For deeper study, see the translation by Martha T. Roth in <i>Law Collections from Mesopotamia and Asia Minor</i>, and the Louvre’s collection page for the stele.</div></footer>
+
+<script>
+const innov=[
+["Law written and displayed in public","<b>What:</b> The laws were carved on a large stele where people could see them.<br><b>Why:</b> Rulers wanted to show they governed by rules, not whim.<br><b>Change:</b> Law became something a person could point to, not just a judge’s mood."],
+["Burden of proof and penalties for false accusation","<b>What:</b> Laws 1–4 punish people who accuse others without proof, sometimes with the penalty the accused would have faced.<br><b>Why:</b> To stop rumor and revenge from becoming prosecution.<br><b>Change:</b> Early form of the idea that accusers must back up claims with evidence."],
+["Proportional punishment","<b>What:</b> Several laws match the penalty to the harm, such as an injury for an injury.<br><b>Why:</b> To replace endless blood feuds with limited, state-controlled penalties.<br><b>Change:</b> Retaliation was capped instead of spiraling."],
+["Contracts, receipts, and written records","<b>What:</b> Merchants, agents, and lenders were required to use written receipts and contracts.<br><b>Why:</b> Trade between cities depended on trust between strangers.<br><b>Change:</b> Commerce became safer and easier to enforce in court."],
+["Professional liability","<b>What:</b> Builders, boat makers, and surgeons were held responsible for faulty work. A builder whose collapsed house killed its owner could face death (law 229).<br><b>Why:</b> To give customers protection when they could not judge quality themselves.<br><b>Change:</b> An early ancestor of building codes and malpractice rules."],
+["Regulated wages and prices","<b>What:</b> Set rates for hired laborers, boat hire, ox rental, and some medical fees.<br><b>Why:</b> To limit price gouging and wage disputes.<br><b>Change:</b> The state took on a role in shaping the economy."],
+["Debt relief and limits on debt slavery","<b>What:</b> People enslaved for debt were to be freed after three years (law 117), and law 48 relieved farmers of interest after storm or flood destroyed crops.<br><b>Why:</b> Crop failures were driving families into ruin.<br><b>Change:</b> An early safety net against permanent debt bondage."],
+["Family and women’s property rights","<b>What:</b> Rules on marriage contracts, dowries, divorce, inheritance, and a wife’s control of her dowry.<br><b>Why:</b> Households were the base of the economy and needed clear rules.<br><b>Change:</b> Women gained legal standing in property matters, though men held far more power."]
+];
+const probs=[
+["Blood feuds and private revenge","Families settled wrongs themselves, often with escalating violence. The Code moved punishment into the courts and capped it."],
+["Different rules in every city","Conquered cities had their own customs. One code gave the empire a common framework."],
+["Unfair or corrupt judges","Law 5 punishes a judge who changes a verdict after it is sealed with a heavy fine and removal from the bench."],
+["Farm failure and debt traps","Mesopotamian farming depended on flood and irrigation. Rules on negligence (laws 53–56) and crop loss kept disasters from becoming personal ruin."],
+["Distrust in trade","Without written proof, merchants could cheat each other with little recourse. Receipts and contracts gave courts something to enforce."],
+["Unsafe or faulty work","Strict liability for builders and surgeons gave customers a remedy when the work harmed them."]];
+const impact={
+short:["<b>Courts gained a reference point.</b> Judges and disputants had a visible standard to appeal to.","<b>Merchants could trade with more confidence.</b> Written deals and receipts made agreements easier to prove.","<b>Farmers had a measure of protection.</b> Debt relief after disaster and limits on servitude helped families keep land and freedom.","<b>The king’s authority grew.</b> Hammurabi’s image as a just ruler helped his rule over many cities.","<b>The harshest penalties fell unevenly.</b> Commoners and slaves faced tougher treatment than nobles."],
+long:["<b>It shaped legal culture across the region.</b> Scribes copied the text for over a thousand years, and later Near Eastern codes drew on similar ideas.","<b>It established the idea that law should be written and public.</b> This principle runs through later traditions, including Roman law.","<b>Scholars compare it with biblical law.</b> Some provisions parallel passages in the Hebrew Bible, though the nature of any influence is debated.","<b>It is a major source on ancient life.</b> Its laws reveal how Babylonians farmed, traded, married, and worked.","<b>It stands as a symbol of legal history.</b> Its image appears in law schools and the U.S. Capitol’s House chamber relief portraits of lawgivers."]};
+const laws=[
+["Evidence","1–4","Accusation","If someone accuses another of a capital crime but cannot prove it, the accuser is put to death."],
+["Courts","5","Judges","A judge who changes a verdict after it has been sealed must pay twelve times the claim and be removed from the bench."],
+["Farming","48","Crop loss","If a storm or flood destroys a debtor’s crop, he owes no interest on his loan that year."],
+["Farming","53–54","Irrigation","A farmer who neglects his dike and floods a neighbor’s field must repay the lost grain."],
+["Trade","104–107","Receipts","An agent who receives goods must give a sealed receipt. Merchants who deny receiving payment face heavy penalties."],
+["Debt","117","Debt servitude","A person sold into service for debt must be freed in the fourth year."],
+["Family","138–140","Divorce","A man who divorces a wife must return her dowry and pay a settlement."],
+["Family","171–172","Widows","A widow keeps her dowry and may stay in her husband’s house."],
+["Justice","196","Eye for an eye","If a man blinds the eye of another man of the same rank, his own eye is destroyed. Other ranks usually meant fines."],
+["Work","215–217","Surgeons","A surgeon is paid by the patient’s class. Heavy penalties apply if a serious operation goes wrong."],
+["Work","229","Builders","If a house collapses and kills its owner, the builder is put to death."],
+["Work","257","Wages","A hired field hand receives a set amount of grain each year."]];
+const g=id=>document.getElementById(id);
+g("innovGrid").innerHTML=innov.map(i=>`<details><summary>${i[0]}</summary><p>${i[1]}</p></details>`).join("");
+g("probGrid").innerHTML=probs.map(p=>`<details open><summary>${p[0]}</summary><p>${p[1]}</p></details>`).join("");
+function showImpact(k){g("impactPanel").innerHTML="<ul>"+impact[k].map(x=>"<li>"+x+"</li>").join("")+"</ul>";document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===k))}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>showImpact(b.dataset.t));showImpact("short");
+const cats=["All",...new Set(laws.map(l=>l[0]))];let cur="All";
+function showLaws(){g("chips").innerHTML=cats.map(c=>`<button aria-pressed="${c===cur}" data-c="${c}">${c}</button>`).join("");
+g("lawList").innerHTML=laws.filter(l=>cur==="All"||l[0]===cur).map(l=>`<div class="law"><h3>Law ${l[1]}: ${l[2]}</h3><p>${l[3]}</p></div>`).join("");
+document.querySelectorAll("#chips button").forEach(b=>b.onclick=()=>{cur=b.dataset.c;showLaws()})}
+showLaws();
+</script>
+</body>
+</html>
